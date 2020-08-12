@@ -13,7 +13,7 @@
 	<description>API project for EMRAPI</description>
 
     <properties>
-        <openMRSVersion>1.9.9</openMRSVersion>
+        <openMRSVersion>2.3.0</openMRSVersion>
     </properties>
 
     <dependencies>

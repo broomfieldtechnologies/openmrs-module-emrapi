@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-@Service(value = "emrOrderService")
+@Service(value = "emrOrderService_1_12")
 @OpenmrsProfile(openmrsVersion = "1.12.0 - 2.*")
 public class EmrOrderServiceImpl_1_12 implements EmrOrderService {
 

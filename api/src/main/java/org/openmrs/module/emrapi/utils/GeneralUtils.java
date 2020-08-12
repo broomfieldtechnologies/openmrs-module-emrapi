@@ -17,6 +17,7 @@ package org.openmrs.module.emrapi.utils;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.lang.StringUtils;
 import org.openmrs.Location;
+import org.openmrs.LocationTag;
 import org.openmrs.Patient;
 import org.openmrs.PatientIdentifier;
 import org.openmrs.PatientIdentifierType;
@@ -36,6 +37,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Date;
+import java.util.Iterator;
 
 /**
  *
@@ -274,6 +276,50 @@ public class GeneralUtils {
         Collections.reverse(lastViewed);
 
         return lastViewed;
+    }
+    
+    /**
+     * Gets the value of the user property
+     * EmrApiConstants.USER_PROPERTY_NAME_LAST_VIEWED_PATIENT_IDS for the user as a list of patients
+     * in reverse order impying the patient that was first added comes last while the last added one
+     * comes first
+     *
+     * @param user
+     * @should return a list of the patients last viewed by the specified user
+     * @should not return voided patients
+     */
+    public static List<Patient> getPatientsForEnterprise(User user) {
+        List<Patient> patientsOfEnterprise = new ArrayList<Patient>();
+        if (user != null) {
+            //The user object cached in the user's context needs to be up to date
+            user = Context.getUserService().getUser(user.getId());
+
+            //get list of locations for the enterprise of the user
+			LocationTag supportsLogin = Context.getLocationService().getLocationTagByName(EmrApiConstants.LOCATION_TAG_SUPPORTS_LOGIN);
+
+            List<Location> locations = Context.getLocationService().getLocationsByTagAndEnterpriseId(
+            		supportsLogin, Context.getLocationService().getEnterpriseForLoggedinUser() );
+            //get the list of patient identifiers
+            List<PatientIdentifier> patIds = Context.getPatientService().getPatientIdentifiers(null, 
+            		Context.getPatientService().getAllPatientIdentifierTypes(),
+            		locations, null, true);
+            //get all patients
+            /**Iterator<PatientIdentifier> patIdsIter = patIds.iterator();
+            while (patIds.iterator().hasNext()) {
+            	Patient patient= patIdsIter.next().getPatient();
+            	patientsOfEnterprise.add(patient);
+            }*/
+            for (PatientIdentifier patid : patIds) {
+            	Patient patient = patid.getPatient();
+            	patientsOfEnterprise.add(patient);
+
+            }
+            //sort them by date created reverse
+        }
+
+        Collections.reverse(patientsOfEnterprise);
+
+        return patientsOfEnterprise;
     }
 
     public static Date getCurrentDateIfNull(Date date){
