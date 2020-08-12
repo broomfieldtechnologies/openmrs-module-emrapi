@@ -28,7 +28,7 @@ import java.util.Set;
 import static org.openmrs.module.emrapi.utils.GeneralUtils.getCurrentDateIfNull;
 
 @Component("obsMapper")
-@OpenmrsProfile(openmrsPlatformVersion = "[1.9.* - 1.10.*]")
+@OpenmrsProfile(openmrsPlatformVersion = "[2.3.* - 2.3.*]")
 public class ObsMapper {
 
     private ConceptService conceptService;

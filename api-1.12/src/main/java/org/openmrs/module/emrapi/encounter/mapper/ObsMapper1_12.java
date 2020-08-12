@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-@Component(value = "obsMapper")
+@Component(value = "obsMapper1_12")
 @OpenmrsProfile(openmrsVersion = "1.12.0 - 2.*")
 public class ObsMapper1_12 extends ObsMapper {
 
