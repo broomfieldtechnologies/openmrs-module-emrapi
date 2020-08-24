@@ -14,6 +14,13 @@
 
 package org.openmrs.module.emrapi.utils;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.lang.StringUtils;
 import org.openmrs.Location;
@@ -30,14 +37,6 @@ import org.openmrs.module.emrapi.EmrApiConstants;
 import org.openmrs.util.LocaleUtility;
 import org.openmrs.util.OpenmrsConstants;
 import org.openmrs.util.OpenmrsUtil;
-
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.Date;
-import java.util.Iterator;
 
 /**
  *
@@ -290,6 +289,7 @@ public class GeneralUtils {
      */
     public static List<Patient> getPatientsForEnterprise(User user) {
         List<Patient> patientsOfEnterprise = new ArrayList<Patient>();
+		Location sessionLocation = Context.getUserContext().getLocation();
         if (user != null) {
             //The user object cached in the user's context needs to be up to date
             user = Context.getUserService().getUser(user.getId());
@@ -303,16 +303,13 @@ public class GeneralUtils {
             List<PatientIdentifier> patIds = Context.getPatientService().getPatientIdentifiers(null, 
             		Context.getPatientService().getAllPatientIdentifierTypes(),
             		locations, null, true);
-            //get all patients
-            /**Iterator<PatientIdentifier> patIdsIter = patIds.iterator();
-            while (patIds.iterator().hasNext()) {
-            	Patient patient= patIdsIter.next().getPatient();
-            	patientsOfEnterprise.add(patient);
-            }*/
+			
             for (PatientIdentifier patid : patIds) {
-            	Patient patient = patid.getPatient();
-            	patientsOfEnterprise.add(patient);
-
+				//get patients for the user's location
+				if (patid.getLocation() == sessionLocation) {
+					Patient patient = patid.getPatient();
+					patientsOfEnterprise.add(patient);
+				}
             }
             //sort them by date created reverse
         }
