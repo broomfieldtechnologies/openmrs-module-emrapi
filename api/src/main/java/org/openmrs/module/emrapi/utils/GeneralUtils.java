@@ -31,6 +31,7 @@ import org.openmrs.PatientIdentifierType;
 import org.openmrs.PersonAddress;
 import org.openmrs.User;
 import org.openmrs.api.APIException;
+import org.openmrs.api.LocationService;
 import org.openmrs.api.PatientService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.emrapi.EmrApiConstants;
@@ -278,18 +279,17 @@ public class GeneralUtils {
     }
     
     /**
-     * Gets the value of the user property
-     * EmrApiConstants.USER_PROPERTY_NAME_LAST_VIEWED_PATIENT_IDS for the user as a list of patients
-     * in reverse order impying the patient that was first added comes last while the last added one
-     * comes first
-     *
-     * @param user
-     * @should return a list of the patients last viewed by the specified user
-     * @should not return voided patients
-     */
+	 * Gets the list of patients for the user enterprise and location
+	 * 
+	 * @param user
+	 * @should return a list of the patients specific to the user's enterprise
+	 * @should not return voided patients
+	 */
     public static List<Patient> getPatientsForEnterprise(User user) {
         List<Patient> patientsOfEnterprise = new ArrayList<Patient>();
 		Location sessionLocation = Context.getUserContext().getLocation();
+		LocationService locationService = Context.getLocationService();
+		String enterpriseId = locationService.getEnterpriseForLoggedinUser();
         if (user != null) {
             //The user object cached in the user's context needs to be up to date
             user = Context.getUserService().getUser(user.getId());
@@ -306,7 +306,8 @@ public class GeneralUtils {
 			
             for (PatientIdentifier patid : patIds) {
 				//get patients for the user's location
-				if (patid.getLocation() == sessionLocation) {
+				if ((patid.getPatient().getPerson().getAttribute("Enterprise").getValue().contentEquals(enterpriseId))
+				        && (patid.getLocation() == sessionLocation)) {
 					Patient patient = patid.getPatient();
 					patientsOfEnterprise.add(patient);
 				}
