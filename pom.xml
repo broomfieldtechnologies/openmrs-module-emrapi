@@ -52,7 +52,7 @@
         <metadatasharingVersion>1.2.2</metadatasharingVersion>
         <eventVersion>2.5</eventVersion>
         <allergyapiVersion>1.4</allergyapiVersion>
-        <webservices.restVersion>2.16</webservices.restVersion>
+        <webservices.restVersion>2.28.0</webservices.restVersion>
         <openMRSVersion>1.11.6</openMRSVersion>
         <jacksonVersion>1.5.0</jacksonVersion>
         <reportingApiConditionalArtifactId>reporting-api-1.9</reportingApiConditionalArtifactId>

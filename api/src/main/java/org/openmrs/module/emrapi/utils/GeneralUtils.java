@@ -29,6 +29,7 @@ import org.openmrs.Patient;
 import org.openmrs.PatientIdentifier;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.PersonAddress;
+import org.openmrs.PersonAttribute;
 import org.openmrs.User;
 import org.openmrs.api.APIException;
 import org.openmrs.api.LocationService;
@@ -306,7 +307,8 @@ public class GeneralUtils {
 			
             for (PatientIdentifier patid : patIds) {
 				//get patients for the user's location
-				if ((patid.getPatient().getPerson().getAttribute("Enterprise").getValue().contentEquals(enterpriseId))
+            	PersonAttribute enterprisePersonAttribute = patid.getPatient().getPerson().getAttribute("Enterprise");
+				if ((enterprisePersonAttribute != null && enterprisePersonAttribute.getValue().contentEquals(enterpriseId))
 				        && (patid.getLocation() == sessionLocation)) {
 					Patient patient = patid.getPatient();
 					patientsOfEnterprise.add(patient);
