@@ -15,12 +15,12 @@
 package org.openmrs.module.emrapi.patient;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Collections;
 
 import org.joda.time.DateTime;
 import org.joda.time.Days;
@@ -184,6 +184,65 @@ public class PatientDomainWrapper implements DomainWrapper {
 		return telephoneNumber;
 	}
 
+	public String getMobilePhoneNumber() {
+		String mobilePhoneNumber = null;
+		PersonAttributeType type = emrApiProperties.getMobilePhoneAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				mobilePhoneNumber = attr.getValue();
+			}
+		}
+		return mobilePhoneNumber;
+	}
+	
+	public String getAlternatePhoneNumber() {
+		String alternatePhoneNumber = null;
+		PersonAttributeType type = emrApiProperties.getAlternatePhoneAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				alternatePhoneNumber = attr.getValue();
+			}
+		}
+		return alternatePhoneNumber;
+	}
+	
+	public String getReligion() {
+		String religion = null;
+		PersonAttributeType type = emrApiProperties.getReligionAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				religion = attr.getValue();
+			}
+		}
+		return religion;
+	}
+	
+	public String getSocialStatus() {
+		String socialStatus = null;
+		PersonAttributeType type = emrApiProperties.getSocialStatusAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				socialStatus = attr.getValue();
+			}
+		}
+		return socialStatus;
+	}
+	
+	public String getOccupation() {
+		String occupation = null;
+		PersonAttributeType type = emrApiProperties.getOccupationAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				occupation = attr.getValue();
+			}
+		}
+		return occupation;
+	}
 	public PersonAddress getPersonAddress() {
 		return patient.getPersonAddress();
 	}

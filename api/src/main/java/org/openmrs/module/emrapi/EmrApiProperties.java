@@ -14,6 +14,13 @@
 
 package org.openmrs.module.emrapi;
 
+import static org.openmrs.module.emrapi.EmrApiConstants.GP_VISIT_ASSIGNMENT_HANDLER_ADJUST_ENCOUNTER_TIME_OF_DAY_IF_NECESSARY;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.apache.commons.lang3.math.NumberUtils;
 import org.openmrs.Concept;
 import org.openmrs.ConceptMapType;
@@ -33,13 +40,6 @@ import org.openmrs.module.metadatamapping.util.ModuleProperties;
 import org.openmrs.util.OpenmrsUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import static org.openmrs.module.emrapi.EmrApiConstants.GP_VISIT_ASSIGNMENT_HANDLER_ADJUST_ENCOUNTER_TIME_OF_DAY_IF_NECESSARY;
 
 /**
  * Properties (some constant, some configured via GPs) for this module.
@@ -167,6 +167,51 @@ public class EmrApiProperties extends ModuleProperties {
 		return type;
 	}
 
+	public PersonAttributeType getMobilePhoneAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.MOBILEPHONE_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.MOBILEPHONE_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getAlternatePhoneAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.ALTERNATEPHONE_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.ALTERNATEPHONE_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getReligionAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.RELIGION_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.RELIGION_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getSocialStatusAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.SOCIALSTATUS_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.SOCIALSTATUS_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOccupationAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OCCUPATION_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OCCUPATION_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
 	public PersonAttributeType getUnknownPatientPersonAttributeType() {
 		PersonAttributeType type = null;
 		type = personService.getPersonAttributeTypeByName(EmrApiConstants.UNKNOWN_PATIENT_PERSON_ATTRIBUTE_TYPE_NAME);

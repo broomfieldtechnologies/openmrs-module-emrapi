@@ -97,6 +97,16 @@ public class EmrApiConstants {
     public static final String TEST_PATIENT_ATTRIBUTE_UUID = "4f07985c-88a5-4abd-aa0c-f3ec8324d8e7";
 
     public static final String TELEPHONE_ATTRIBUTE_TYPE_NAME = "Telephone Number";
+	
+	public static final String MOBILEPHONE_ATTRIBUTE_TYPE_NAME = "Mobile Phone Number";
+	
+	public static final String ALTERNATEPHONE_ATTRIBUTE_TYPE_NAME = "Alternate Phone Number";
+	
+	public static final String RELIGION_ATTRIBUTE_TYPE_NAME = "Religion";
+	
+	public static final String SOCIALSTATUS_ATTRIBUTE_TYPE_NAME = "Social Status";
+	
+	public static final String OCCUPATION_ATTRIBUTE_TYPE_NAME = "Occupation";
 
     public static final String PRIMARY_IDENTIFIER_TYPE = "emr.primaryIdentifierType";
 
