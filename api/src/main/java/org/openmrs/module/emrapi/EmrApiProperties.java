@@ -176,6 +176,15 @@ public class EmrApiProperties extends ModuleProperties {
 		return type;
 	}
 	
+	public PersonAttributeType getEmailIdAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.EMAILID_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.EMAILID_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
 	public PersonAttributeType getAlternatePhoneAttributeType() {
 		PersonAttributeType type = null;
 		type = personService.getPersonAttributeTypeByName(EmrApiConstants.ALTERNATEPHONE_ATTRIBUTE_TYPE_NAME);
