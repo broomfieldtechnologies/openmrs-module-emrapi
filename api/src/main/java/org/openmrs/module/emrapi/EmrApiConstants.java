@@ -100,6 +100,8 @@ public class EmrApiConstants {
 	
 	public static final String MOBILEPHONE_ATTRIBUTE_TYPE_NAME = "Mobile Phone Number";
 	
+	public static final String EMAILID_ATTRIBUTE_TYPE_NAME = "E-mail ID";
+	
 	public static final String ALTERNATEPHONE_ATTRIBUTE_TYPE_NAME = "Alternate Phone Number";
 	
 	public static final String RELIGION_ATTRIBUTE_TYPE_NAME = "Religion";

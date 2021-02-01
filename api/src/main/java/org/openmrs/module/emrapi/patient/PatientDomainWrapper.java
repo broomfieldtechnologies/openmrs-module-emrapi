@@ -196,6 +196,18 @@ public class PatientDomainWrapper implements DomainWrapper {
 		return mobilePhoneNumber;
 	}
 	
+	public String getEmailId() {
+		String emailId = null;
+		PersonAttributeType type = emrApiProperties.getEmailIdAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				emailId = attr.getValue();
+			}
+		}
+		return emailId;
+	}
+	
 	public String getAlternatePhoneNumber() {
 		String alternatePhoneNumber = null;
 		PersonAttributeType type = emrApiProperties.getAlternatePhoneAttributeType();
