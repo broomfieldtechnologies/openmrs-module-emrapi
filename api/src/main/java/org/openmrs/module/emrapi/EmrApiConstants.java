@@ -106,6 +106,66 @@ public class EmrApiConstants {
 	
 	public static final String RELIGION_ATTRIBUTE_TYPE_NAME = "Religion";
 	
+	public static final String BCG_ATTRIBUTE_TYPE_NAME = "BCG";
+	
+	public static final String HEPB1_ATTRIBUTE_TYPE_NAME = "Hepatitis B - 1st dose";
+	
+	public static final String OPV1_ATTRIBUTE_TYPE_NAME = "Oral Polio Vaccine - 1st dose";
+	
+	public static final String DPT1_ATTRIBUTE_TYPE_NAME = "DPT - 1st Dose";
+	
+	public static final String OPV2_ATTRIBUTE_TYPE_NAME = "Oral Polio Vaccine - 2nd dose";
+	
+	public static final String HEPB2_ATTRIBUTE_TYPE_NAME = "Hepatitis B - 2nd dose";
+	
+	public static final String HIB1_ATTRIBUTE_TYPE_NAME = "Hib - 1st dose";
+	
+	public static final String DPT2_ATTRIBUTE_TYPE_NAME = "DPT - 2nd dose";
+	
+	public static final String OPV3_ATTRIBUTE_TYPE_NAME = "Oral Polio - 3rd dose";
+	
+	public static final String HIB2_ATTRIBUTE_TYPE_NAME = "Hib - 2nd dose";
+	
+	public static final String DPT3_ATTRIBUTE_TYPE_NAME = "DPT - 3rd dose";
+	
+	public static final String OPV4_ATTRIBUTE_TYPE_NAME = "Oral Polio - 4th dose";
+	
+	public static final String HIB3_ATTRIBUTE_TYPE_NAME = "Hib - 3rd dose";
+	
+	public static final String OPV5_ATTRIBUTE_TYPE_NAME = "Oral Polio - 5th dose";
+	
+	public static final String HEPB3_ATTRIBUTE_TYPE_NAME = "Hepatitis B - 3rd dose";
+	
+	public static final String MEASLES_ATTRIBUTE_TYPE_NAME = "Measles";
+	
+	public static final String MMR_ATTRIBUTE_TYPE_NAME = "MMR";
+	
+	public static final String DPT1B_ATTRIBUTE_TYPE_NAME = "DPT - 1st booster dose";
+	
+	public static final String OPV6_ATTRIBUTE_TYPE_NAME = "Oral Polio - 6th dose";
+	
+	public static final String DPT2B_ATTRIBUTE_TYPE_NAME = "DPT - 2nd booster dose";
+	
+	public static final String OPV7_ATTRIBUTE_TYPE_NAME = "Oral Polio - 7th dose";
+	
+	public static final String TT3B_ATTRIBUTE_TYPE_NAME = "TT (Tetanus) - 3rd booster dose";
+	
+	public static final String TT4B_ATTRIBUTE_TYPE_NAME = "TT (Tetanus) - 4th booster dose";
+	
+	public static final String TYPHOID_ATTRIBUTE_TYPE_NAME = "Typhoid";
+	
+	public static final String CHICKENPOX_ATTRIBUTE_TYPE_NAME = "Chicken Pox";
+	
+	public static final String HEPA1_ATTRIBUTE_TYPE_NAME = "Hepatitis A - 1st dose";
+	
+	public static final String HEPA2_ATTRIBUTE_TYPE_NAME = "Hepatitis A - 2nd dose";
+	
+	public static final String COVID191_ATTRIBUTE_TYPE_NAME = "COVID-19 1st dose";
+	
+	public static final String COVID192_ATTRIBUTE_TYPE_NAME = "COVID-19 2nd dose";
+	
+	public static final String COVID19B_ATTRIBUTE_TYPE_NAME = "COVID-19 Booster dose";
+	
 	public static final String SOCIALSTATUS_ATTRIBUTE_TYPE_NAME = "Social Status";
 	
 	public static final String OCCUPATION_ATTRIBUTE_TYPE_NAME = "Occupation";

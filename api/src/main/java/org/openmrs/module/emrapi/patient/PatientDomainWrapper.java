@@ -232,6 +232,366 @@ public class PatientDomainWrapper implements DomainWrapper {
 		return religion;
 	}
 	
+	public String getBCG() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getBCGAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHEPB1() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHEPB1AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV1() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV1AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getDPT1() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getDPT1AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV2() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV2AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHEPB2() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHEPB2AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHIB1() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHIB1AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getDPT2() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getDPT2AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV3() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV3AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHIB2() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHIB2AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getDPT3() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getDPT3AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV4() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV4AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHIB3() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHIB3AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV5() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV5AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHEPB3() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHEPB3AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getmeasles() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getmeaslesAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getMMR() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getMMRAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getDPT1B() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getDPT1BAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV6() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV6AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getDPT2B() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getDPT2BAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getOPV7() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getOPV7AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getTT3B() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getTT3BAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getTT4B() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getTT4BAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String gettyphoid() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.gettyphoidAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getchickenpox() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getchickenpoxAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHEPA1() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHEPA1AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getHEPA2() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getHEPA2AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getcovid191() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getcovid191AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getcovid192() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getcovid192AttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
+	public String getcovid19b() {
+		String vaccine_attr = null;
+		PersonAttributeType type = emrApiProperties.getcovid19bAttributeType();
+		if (type != null) {
+			PersonAttribute attr = patient.getAttribute(type);
+			if (attr != null && attr.getValue() != null) {
+				vaccine_attr = attr.getValue();
+			}
+		}
+		return vaccine_attr;
+	}
+	
 	public String getSocialStatus() {
 		String socialStatus = null;
 		PersonAttributeType type = emrApiProperties.getSocialStatusAttributeType();

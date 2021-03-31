@@ -203,6 +203,276 @@ public class EmrApiProperties extends ModuleProperties {
 		return type;
 	}
 	
+	public PersonAttributeType getBCGAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.BCG_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.BCG_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHEPB1AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HEPB1_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HEPB1_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV1AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV1_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV1_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getDPT1AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.DPT1_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.DPT1_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV2AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV2_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV2_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHEPB2AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HEPB2_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HEPB2_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHIB1AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HIB1_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HIB1_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getDPT2AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.DPT2_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.DPT2_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV3AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV3_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV3_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHIB2AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HIB2_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HIB2_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getDPT3AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.DPT3_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.DPT3_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV4AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV4_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV4_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHIB3AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HIB3_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HIB3_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV5AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV5_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV5_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHEPB3AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HEPB3_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HEPB3_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getmeaslesAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.MEASLES_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.MEASLES_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getMMRAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.MMR_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.MMR_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getDPT1BAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.DPT1B_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.DPT1B_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV6AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV6_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV6_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getDPT2BAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.DPT2B_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.DPT2B_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getOPV7AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.OPV7_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.OPV7_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getTT3BAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.TT3B_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.TT3B_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getTT4BAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.TT4B_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.TT4B_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType gettyphoidAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.TYPHOID_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.TYPHOID_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getchickenpoxAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.CHICKENPOX_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.CHICKENPOX_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHEPA1AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HEPA1_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HEPA1_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getHEPA2AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.HEPA2_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.HEPA2_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getcovid191AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.COVID191_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.COVID191_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getcovid192AttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.COVID192_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.COVID192_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
+	public PersonAttributeType getcovid19bAttributeType() {
+		PersonAttributeType type = null;
+		type = personService.getPersonAttributeTypeByName(EmrApiConstants.COVID19B_ATTRIBUTE_TYPE_NAME);
+		if (type == null) {
+			throw new IllegalStateException("Configuration required: " + EmrApiConstants.COVID19B_ATTRIBUTE_TYPE_NAME);
+		}
+		return type;
+	}
+	
 	public PersonAttributeType getSocialStatusAttributeType() {
 		PersonAttributeType type = null;
 		type = personService.getPersonAttributeTypeByName(EmrApiConstants.SOCIALSTATUS_ATTRIBUTE_TYPE_NAME);
